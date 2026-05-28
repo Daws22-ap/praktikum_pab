@@ -54,7 +54,7 @@ class TaskMenuPage extends StatelessWidget {
                   title: 'Praktikum 2',
                   subtitle: 'Unknown',
                   onTap: () {
-                    goToPage(context, const Praktikum2MainPage());
+                    goToPage(context, const TugasAktivitas2Page());
                   },
                 ),
                 TaskCard(

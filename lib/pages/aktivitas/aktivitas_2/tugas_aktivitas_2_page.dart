@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:praktikum_pab/models/dokter_model.dart';
 import 'package:praktikum_pab/pages/aktivitas/aktivitas_2/dokter_kategori_nav_page.dart';
 import 'package:praktikum_pab/pages/aktivitas/aktivitas_2/dokter_profile_nav_page.dart';
+import 'package:praktikum_pab/pages/aktivitas/aktivitas_2/profile_page.dart';
 
 class TugasAktivitas2Page extends StatefulWidget {
   const TugasAktivitas2Page({super.key});
@@ -26,6 +27,7 @@ class _TugasAktivitas2PageState extends State<TugasAktivitas2Page> {
     final List<Widget> pages = [
       DokterKategoriNavPage(onDokterSelected: _onDokterSelected),
       DokterProfileNavPage(dokter: _selectedDokter),
+      const ProfilePage(),
     ];
 
     return Scaffold(
@@ -44,9 +46,10 @@ class _TugasAktivitas2PageState extends State<TugasAktivitas2Page> {
             label: 'Kategori Dokter',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.medical_information),
             label: 'Profil Dokter',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
     );
