@@ -19,9 +19,11 @@ class DokterProfileNavPage extends StatelessWidget {
     if (dokterType.contains('Bedah')) return Icons.medical_services_outlined;
     if (dokterType.contains('Kandungan')) return Icons.pregnant_woman_outlined;
     if (dokterType.contains('Paru')) return Icons.air_outlined;
-    if (dokterType.contains('Psikiater')) return Icons.self_improvement_outlined;
+    if (dokterType.contains('Psikiater'))
+      return Icons.self_improvement_outlined;
     if (dokterType.contains('Gizi')) return Icons.restaurant_menu_outlined;
-    if (dokterType.contains('Gigi')) return Icons.sentiment_satisfied_alt_outlined;
+    if (dokterType.contains('Gigi'))
+      return Icons.sentiment_satisfied_alt_outlined;
     if (dokterType.contains('Anak')) return Icons.child_friendly_outlined;
     if (dokterType.contains('Hewan')) return Icons.pets_outlined;
     return Icons.local_hospital_outlined;
@@ -68,7 +70,9 @@ class DokterProfileNavPage extends StatelessWidget {
     final int emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
     for (int i = 0; i < fullStars; i++) {
-      stars.add(const Icon(Icons.star_rounded, color: Color(0xFFF4B400), size: 20));
+      stars.add(
+        const Icon(Icons.star_rounded, color: Color(0xFFF4B400), size: 20),
+      );
     }
     if (hasHalfStar) {
       stars.add(
@@ -76,7 +80,13 @@ class DokterProfileNavPage extends StatelessWidget {
       );
     }
     for (int i = 0; i < emptyStars; i++) {
-      stars.add(const Icon(Icons.star_outline_rounded, color: Color(0xFFD1D5DB), size: 20));
+      stars.add(
+        const Icon(
+          Icons.star_outline_rounded,
+          color: Color(0xFFD1D5DB),
+          size: 20,
+        ),
+      );
     }
     return stars;
   }
@@ -156,7 +166,10 @@ class DokterProfileNavPage extends StatelessWidget {
                   top: 16,
                   left: 16,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.92),
                       borderRadius: BorderRadius.circular(999),
@@ -175,7 +188,10 @@ class DokterProfileNavPage extends StatelessWidget {
                   right: 16,
                   bottom: 16,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.92),
                       borderRadius: BorderRadius.circular(999),
@@ -213,7 +229,7 @@ class DokterProfileNavPage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             const Text(
-              'Profil dokter ditampilkan dengan susunan sederhana: ringkasan, jadwal, biografi, lalu aksi utama.',
+              'Spesialis',
               style: TextStyle(
                 fontSize: 14,
                 height: 1.5,
@@ -400,7 +416,11 @@ class _ProfileSectionCard extends StatelessWidget {
               CircleAvatar(
                 radius: 18,
                 backgroundColor: const Color(0xFFEEF4FF),
-                child: Icon(icon, color: DokterProfileNavPage._primaryColor, size: 18),
+                child: Icon(
+                  icon,
+                  color: DokterProfileNavPage._primaryColor,
+                  size: 18,
+                ),
               ),
               const SizedBox(width: 10),
               Text(
