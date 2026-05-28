@@ -228,14 +228,7 @@ class DokterProfileNavPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Spesialis',
-              style: TextStyle(
-                fontSize: 14,
-                height: 1.5,
-                color: Color(0xFF6B7280),
-              ),
-            ),
+
             const SizedBox(height: 16),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
