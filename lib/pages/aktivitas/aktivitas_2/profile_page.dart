@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:praktikum_pab/constants/app_data.dart';
+import 'package:praktikum_pab/models/peserta_data.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -7,19 +9,29 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     const accentColor = Color(0xFF6AA8FF);
     const softAccent = Color(0xFFE8EEFF);
+    final pesertaData = PesertaDataStore.current;
 
     final profileItems = [
-      const _ProfileItem(
+      _ProfileItem(
         icon: Icons.person_outline_rounded,
-        value: 'Mohammad Firdausi Hadi Pramono',
+        value: pesertaData?.nama ?? AppData.studentName,
       ),
-      const _ProfileItem(icon: Icons.call_outlined, value: '1462300239'),
-      const _ProfileItem(
+      _ProfileItem(
+        icon: Icons.call_outlined,
+        value: pesertaData?.nbi ?? AppData.studentId,
+      ),
+      _ProfileItem(
         icon: Icons.email_outlined,
-        value: 'pab2023@gmail.com',
+        value: pesertaData?.email ?? '-',
       ),
-      const _ProfileItem(icon: Icons.location_on_outlined, value: 'Mojokerto'),
-      const _ProfileItem(icon: Icons.camera_alt_outlined, value: 'pab2026'),
+      _ProfileItem(
+        icon: Icons.location_on_outlined,
+        value: pesertaData?.alamat ?? '-',
+      ),
+      _ProfileItem(
+        icon: Icons.camera_alt_outlined,
+        value: pesertaData?.instagram ?? '-',
+      ),
     ];
 
     return LayoutBuilder(
@@ -66,7 +78,7 @@ class ProfilePage extends StatelessWidget {
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.08),
+                              color: Colors.black.withValues(alpha: 0.08),
                               blurRadius: 18,
                               offset: const Offset(0, 6),
                             ),

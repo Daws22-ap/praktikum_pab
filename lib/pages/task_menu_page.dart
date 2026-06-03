@@ -5,6 +5,7 @@ import '../helpers/message_helper.dart';
 import '../widgets/task_card.dart';
 import '../pages/praktikum/praktikum_1/dokter_kategori_page.dart';
 import '../pages/aktivitas/aktivitas_2/tugas_aktivitas_2_page.dart';
+import '../pages/aktivitas/aktivitas_3/aktivitas_3_splash_page.dart';
 
 class TaskMenuPage extends StatelessWidget {
   const TaskMenuPage({super.key});
@@ -36,30 +37,35 @@ class TaskMenuPage extends StatelessWidget {
                 ),
                 TaskCard(
                   title: 'Aktivitas 2',
-                  subtitle: 'Bottom Navbar',
+                  subtitle: 'Penjadwalan Dokter Versi Final',
                   onTap: () {
-                    // Nanti diarahkan ke halaman Praktikum 1
                     goToPage(context, const TugasAktivitas2Page());
                   },
                 ),
                 TaskCard(
-                  title: 'Tugas Praktikum 1',
-                  subtitle: 'Penjadwalan Dokter',
+                  title: 'Aktivitas 3',
+                  subtitle: 'Isian Form Praktikum dan Splash Screen',
                   onTap: () {
-                    // Nanti diarahkan ke halaman Aktivitas 2
+                    goToPage(context, const Aktivitas3SplashPage());
+                  },
+                ),
+                TaskCard(
+                  title: 'Tugas Praktikum 1',
+                  subtitle: 'Penjadwalan Dokter Versi Draft',
+                  onTap: () {
                     goToPage(context, const DokterKategoriPage());
                   },
                 ),
                 TaskCard(
                   title: 'Praktikum 2',
-                  subtitle: 'Unknown',
+                  subtitle: 'Navbar, file disamakan dengan Aktivitas 2',
                   onTap: () {
                     goToPage(context, const TugasAktivitas2Page());
                   },
                 ),
                 TaskCard(
-                  title: 'Tugas Praktikum 2',
-                  subtitle: 'Unknown',
+                  title: 'Tugas Praktikum',
+                  subtitle: 'Masih Kosong',
                   onTap: () {
                     tidakAdaPage(context);
                   },

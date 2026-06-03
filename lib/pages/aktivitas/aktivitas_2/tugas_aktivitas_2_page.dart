@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:praktikum_pab/models/dokter_model.dart';
+import 'package:praktikum_pab/helpers/navigation_helper.dart';
 import 'package:praktikum_pab/pages/aktivitas/aktivitas_2/dokter_kategori_nav_page.dart';
 import 'package:praktikum_pab/pages/aktivitas/aktivitas_2/dokter_profile_nav_page.dart';
 import 'package:praktikum_pab/pages/aktivitas/aktivitas_2/profile_page.dart';
+import 'package:praktikum_pab/pages/task_menu_page.dart';
 
 class TugasAktivitas2Page extends StatefulWidget {
   const TugasAktivitas2Page({super.key});
@@ -31,7 +33,16 @@ class _TugasAktivitas2PageState extends State<TugasAktivitas2Page> {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text(' Aktivitas 2'), centerTitle: true),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            replaceWithPage(context, const TaskMenuPage());
+          },
+        ),
+        title: const Text(' Aktivitas 2'),
+        centerTitle: true,
+      ),
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

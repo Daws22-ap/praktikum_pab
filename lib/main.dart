@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'pages/welcome_page.dart';
-import '../constants/app_colors.dart';
+
+import 'constants/app_colors.dart';
+import 'pages/aktivitas/aktivitas_3/aktivitas_3_splash_page.dart';
 
 void main() {
   runApp(const PraktikumApp());
@@ -30,7 +31,7 @@ class PraktikumApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const WelcomePage(),
+      home: const Aktivitas3SplashPage(),
     );
   }
 }
