@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'aktivitas_3_page.dart';
+import 'package:praktikum_pab/pages/aktivitas/aktivitas_4/aktivitas_4_pin.dart';
 
 class Aktivitas3SplashPage extends StatefulWidget {
   const Aktivitas3SplashPage({super.key});
@@ -27,7 +26,7 @@ class _Aktivitas3SplashPageState extends State<Aktivitas3SplashPage> {
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const Aktivitas3Page()),
+      MaterialPageRoute(builder: (context) => const Aktivitas4Pin()),
     );
   }
 

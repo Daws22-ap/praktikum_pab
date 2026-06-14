@@ -6,6 +6,7 @@ import '../pages/praktikum/praktikum_1/dokter_kategori_page.dart';
 import '../pages/praktikum/praktikum_4/praktikum_4_dog_page.dart';
 import '../pages/aktivitas/aktivitas_2/tugas_aktivitas_2_page.dart';
 import '../pages/aktivitas/aktivitas_3/aktivitas_3_splash_page.dart';
+import '../pages/aktivitas/aktivitas_4/aktivitas_4_pin.dart';
 
 class TaskMenuPage extends StatelessWidget {
   const TaskMenuPage({super.key});
@@ -47,6 +48,13 @@ class TaskMenuPage extends StatelessWidget {
                   subtitle: 'Isian Form Praktikum dan Splash Screen',
                   onTap: () {
                     goToPage(context, const Aktivitas3SplashPage());
+                  },
+                ),
+                TaskCard(
+                  title: 'Aktivitas 4',
+                  subtitle: 'Login dengan Pin',
+                  onTap: () {
+                    goToPage(context, const Aktivitas4Pin());
                   },
                 ),
                 TaskCard(
