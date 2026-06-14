@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../pages/welcome_page.dart';
 import '../helpers/navigation_helper.dart';
-import '../helpers/message_helper.dart';
 import '../widgets/task_card.dart';
 import '../pages/praktikum/praktikum_1/dokter_kategori_page.dart';
+import '../pages/praktikum/praktikum_4/praktikum_4_dog_page.dart';
 import '../pages/aktivitas/aktivitas_2/tugas_aktivitas_2_page.dart';
 import '../pages/aktivitas/aktivitas_3/aktivitas_3_splash_page.dart';
 
@@ -64,10 +64,10 @@ class TaskMenuPage extends StatelessWidget {
                   },
                 ),
                 TaskCard(
-                  title: 'Tugas Praktikum',
-                  subtitle: 'Masih Kosong',
+                  title: 'Praktikum 4',
+                  subtitle: 'Menampilkan 20 gambar anjing dari Dog API',
                   onTap: () {
-                    tidakAdaPage(context);
+                    goToPage(context, const Praktikum4DogPage());
                   },
                 ),
               ],
